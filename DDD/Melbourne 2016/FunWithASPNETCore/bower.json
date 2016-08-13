@@ -1,0 +1,7 @@
+{
+	"name": "asp.net",
+	"private": true,
+  "dependencies": {
+    "jQuery": "~3.1.0"
+  }
+}
