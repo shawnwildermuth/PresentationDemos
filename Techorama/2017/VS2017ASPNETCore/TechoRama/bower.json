@@ -1,0 +1,8 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "jQuery": "~3.2.1",
+    "underscore": "^1.8.3"
+  }
+}

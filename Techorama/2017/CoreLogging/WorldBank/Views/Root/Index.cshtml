@@ -1,0 +1,15 @@
+﻿@model IEnumerable<string>
+@{
+  ViewData["Title"] = "World Bank Projects";
+}
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h2>World Bank Projects by Region</h2>
+    <ul>
+      @foreach (var region in Model)
+      {
+        <li><a asp-action="Region" asp-route-id="@region">@region</a></li>
+      }
+    </ul>
+  </div>
+</div>
