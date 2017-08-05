@@ -1,0 +1,2 @@
+GET http://wildermuth.com/api/foo
+Accept: text/html
