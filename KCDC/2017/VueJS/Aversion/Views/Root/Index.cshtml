@@ -1,0 +1,76 @@
+﻿@model Customer
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fun With VueJS</title>
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-brand">Aversion</div>
+      </div>
+    </nav>
+
+    <main>
+      <div>
+        <h1>Welcome to Aversion</h1>
+        <div class="alert alert-warning" v-if="isBusy">Please wait...</div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="well well-sm">
+              <form novalidate v-bind:title="'My Name is: ' + name">
+                <div class="form-group">
+                  <label asp-for="Name">Company Name</label>
+                  <input type="text" asp-for="Name" class="form-control" v-model="company.name" v-validate="'required|min:5'" />
+                  <span v-show="errors.has('Name')">{{ errors.first('Name') }}</span>
+                </div>
+                <div class="form-group">
+                  <label asp-for="Contact">Contact Name</label>
+                  <input type="text" asp-for="Contact" class="form-control" v-model="company.contactName" v-validate="'required'" />
+                  <span v-show="errors.has('Contact')">{{ errors.first('Contact') }}</span>
+                </div>
+                <div class="form-group">
+                  <label  asp-for="Phone">Phone</label>
+                  <input  asp-for="Phone" type="text" class="form-control" v-model="company.phone" v-validate="'required'" />
+                  <span v-show="errors.has('Phone')">{{ errors.first('Phone') }}</span>
+                </div>
+                <div class="form-group">
+                  <input type="submit" class="btn btn-success" value="Add" v-on:click.prevent="onSubmit()" />
+                </div>
+              </form>
+            </div> 
+          </div>
+          <div class="col-lg-6">
+            <div class="well well-sm">
+              <h3>Products</h3>
+              <div>{{ name }} -  {{ birthdate | shortDate }}</div>
+              <ul>
+                <li v-for="p in products">{{ p.name }}: ${{ p.listPrice.toFixed(2) }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="row">
+        <p class="text-center">Aversion Website &copy; 2017</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="~/lib/jquery/dist/jquery.min.js" type="application/javascript"></script>
+  <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" type="application/javascript"></script>
+  <script src="~/lib/vue/dist/vue.min.js"></script>
+  <script src="~/lib/axios/dist/axios.min.js"></script>
+  <script src="~/lib/vee-validate/dist/vee-validate.min.js"></script>
+  <script src="~/js/index.js"></script>
+</body>
+</html>
