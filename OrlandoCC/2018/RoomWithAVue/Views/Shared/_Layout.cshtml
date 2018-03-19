@@ -1,0 +1,55 @@
+﻿<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Room With a Vue - @ViewBag.Title</title>
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link href="~/lib/bootswatch/dist/cosmo/bootstrap.min.css" rel="stylesheet" />
+  <link href="~/lib/fontawesome/web-fonts-with-css/css/fontawesome.min.css" rel="stylesheet" />
+  <link href="~/lib/fontawesome/web-fonts-with-css/css/fa-brands.min.css" rel="stylesheet" />
+  <link href="~/lib/fontawesome/web-fonts-with-css/css/fa-solid.min.css" rel="stylesheet" />
+
+  @RenderSection("header", false)
+</head>
+<body>
+  <header class="bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark justify-content-between">
+        <a href="/" class="navbar-brand"><i class="fab fa-vuejs"></i> Room With a Vue</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="menu">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" asp-controller="Root" asp-action="Index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" asp-controller="Root" asp-action="Contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  </header>
+  
+    <main class="container">
+      <div>
+        <h2 class="text-center">@ViewBag.Title</h2>
+        @RenderBody()
+      </div>
+    </main>
+
+    <footer class="container">
+      <div class="text-center">
+        <p>Room With a View Website &copy; @DateTime.Now.Year</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="~/lib/jquery/dist/jquery.min.js" type="application/javascript"></script>
+  <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" type="application/javascript"></script>
+  @RenderSection("scripts", false)
+</body>
+</html>
