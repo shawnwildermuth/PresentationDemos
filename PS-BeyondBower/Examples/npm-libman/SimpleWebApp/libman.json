@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "defaultDestination": "wwwroot/lib",
+  "defaultProvider": "filesystem",
+  "libraries": [
+    {
+      "library": "node_modules/jquery/dist",
+      "files": [ "jquery.min.js", "jquery.min.map" ],
+      "destination": "wwwroot/lib/jquery/dist"
+    },
+    {
+      "library": "node_modules/bootstrap/dist/",
+      "destination": "wwwroot/lib/bootstrap/dist",
+      "files": [
+        "js/bootstrap.min.js",
+        "css/bootstrap.min.css",
+        "css/bootstrap.min.css.map",
+        "css/bootstrap-theme.min.css",
+        "css/bootstrap-theme.min.css.map"
+      ]
+    },
+    {
+      "library": "node_modules/jquery-validation/dist/",
+      "files": [ "jquery.validate.min.js" ],
+      "destination": "wwwroot/lib/jquery-validation/dist"
+    },
+    {
+      "library": "node_modules/jquery-validation-unobtrusive/dist/",
+      "files": [ "jquery.validate.unobtrusive.min.js" ],
+      "destination": "wwwroot/lib/jquery-validation-unobtrusive/dist"
+    }
+  ]
+}
