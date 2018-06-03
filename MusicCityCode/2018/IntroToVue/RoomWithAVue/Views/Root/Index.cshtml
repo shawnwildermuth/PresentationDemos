@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Room>
+@section scripts {
+  <script src="~/node_modules/vue/dist/vue.js"></script>
+  <script src="~/node_modules/lodash/lodash.js"></script>
+  <script src="~/js/waitCursor.js"></script>
+  <script src="~/js/index.js"></script>
+}
+<div class="row" id="theApp">
+  <div class="col-md-12">
+    <div>
+      {{ name }}: {{ location }}
+      {{ birthday | date }}
+      <button class="btn btn-info" v-on:click="onNewRoom">Add Room</button>
+    </div>
+    <div class="alert alert-danger" v-if="error">{{ error }}</div>
+    <wait-cursor :busy="isBusy" :msg="name"></wait-cursor>
+  </div>
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-4" v-for="r in rooms">
+        <div class="card">
+          <img class="card-img" :src="r.images[0].url" />
+          <div class="card-body">
+            <h4 class="card-title">{{ r.title }}</h4>
+            <p class="card-text">{{ r.description }}</p>
+            <ul class="list-unstyled">
+              <li><strong><i class="fas fa-male"></i> Max Guests:</strong> {{ r.maxGuests }}</li>
+              <li><strong><i class="fas fa-money-bill-alt"></i> Price:</strong> ${{ r.rate }}</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="float-right">
+              <button class="btn btn-sm btn-success" v-on:click="onBook(r)">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  </div>
+</div>

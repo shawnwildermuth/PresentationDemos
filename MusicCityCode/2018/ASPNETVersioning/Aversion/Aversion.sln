@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26621.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aversion", "Aversion\Aversion.csproj", "{6EDB6050-7DED-49EA-9A5C-EC1479B6A420}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EDB6050-7DED-49EA-9A5C-EC1479B6A420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EDB6050-7DED-49EA-9A5C-EC1479B6A420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EDB6050-7DED-49EA-9A5C-EC1479B6A420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EDB6050-7DED-49EA-9A5C-EC1479B6A420}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4216712-627C-4759-973F-D8BF86A454A5}
+	EndGlobalSection
+EndGlobal

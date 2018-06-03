@@ -1,0 +1,55 @@
+﻿<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Room With a Vue - @ViewBag.Title</title>
+  <link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="~/node_modules/bootswatch/dist/cosmo/bootstrap.min.css" rel="stylesheet" />
+  <link href="~/node_modules/@@fortawesome/fontawesome-free-webfonts/css/fontawesome.css" rel="stylesheet" />
+  <link href="~/node_modules/@@fortawesome/fontawesome-free-webfonts/css/fa-brands.css" rel="stylesheet" />
+  <link href="~/node_modules/@@fortawesome/fontawesome-free-webfonts/css/fa-solid.css" rel="stylesheet" />
+
+  @RenderSection("header", false)
+</head>
+<body>
+  <header class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark justify-content-between">
+      <a href="/" class="navbar-brand"><i class="fab fa-vuejs"></i> Room With a Vue</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="menu">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" asp-controller="Root" asp-action="Index">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" asp-controller="Root" asp-action="Contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div>
+      <h2 class="text-center">@ViewBag.Title</h2>
+      @RenderBody()
+    </div>
+  </main>
+
+  <footer class="container">
+    <div class="text-center">
+      <p>Room With a View Website &copy; @DateTime.Now.Year</p>
+    </div>
+  </footer>
+
+  <script src="~/node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  @RenderSection("scripts", false)
+</body>
+</html>
