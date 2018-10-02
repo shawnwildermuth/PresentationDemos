@@ -1,0 +1,57 @@
+﻿@{
+  ViewBag.Title = "Contact Us";
+}
+@section scripts {
+  <script src="~/node_modules/vue/dist/vue.js"></script>
+  <script src="~/node_modules/axios/dist/axios.js"></script>
+  <script src="~/node_modules/vee-validate/dist/vee-validate.js"></script>
+  <script src="~/js/waitCursor.js"></script>
+  <script src="~/js/contact.js"></script>
+}
+<div class="row">
+  <div class="col-lg-6 offset-lg-3">
+    <div class="card p-3" id="theForm">
+      <div class="card p-3" id="theForm">
+        <wait-cursor msg="Please Wait...." :busy="isBusy"></wait-cursor>
+        <div class="alert alert-info" v-if="result">{{ result }}</div>
+        <form novalidate v-on:submit.prevent="onSubmit()">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" class="form-control" v-model="sender.firstName" v-validate="'required|min:5'" />
+            <span class="text-danger" v-show="errors.has('firstName')">{{ errors.first('firstName') }}</span>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" class="form-control" v-model="sender.lastName" v-validate="'required'" />
+            <span class="text-danger" v-show="errors.has('lastName')">{{ errors.first('lastName') }}</span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" class="form-control" v-model="sender.email" v-validate="'required'" />
+            <span class="text-danger" v-show="errors.has('email')">{{ errors.first('email') }}</span>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" class="form-control" v-model="sender.subject">
+              <option selected>(Pick One)</option>
+              <option>About the Bed and Breakfast</option>
+              <option>Room Rates</option>
+              <option>Questions about the Area</option>
+              <option>Availablity</option>
+            </select>
+            <span class="text-danger"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea rows="4" id="message" name="message" class="form-control" v-model="sender.message" v-validate="'required'"></textarea>
+            <span class="text-danger" v-show="errors.has('message')">{{ errors.first('message') }}</span>
+          </div>
+          <div class="form-group">
+            <input type="submit" class="btn btn-success" value="Add" v-bind:disabled="errors.any()" />
+            <a asp-controller="Root" asp-action="Index" class="btn btn-outline-dark">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
