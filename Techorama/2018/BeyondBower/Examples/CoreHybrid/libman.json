@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "defaultProvider": "filesystem"
+  "libraries": [
+    {
+      "library": "node_modules/jquery/dist/",
+      "destination": "wwwroot/lib/jquery",
+      "files": [
+        "jquery.min.js",
+        "jquery.min.map"
+      ]
+    }
+  ]
+}
