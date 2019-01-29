@@ -1,0 +1,13 @@
+﻿{
+  "Logging": {
+    "IncludeScopes": false,
+    "LogLevel": {
+      "Default": "Debug",
+      "System": "Warning",
+      "Microsoft": "Warning"
+    }
+  },
+  "ConnectionStrings": {
+    "AccomodationConnection": "server=(localdb)\\MSSQLLocalDB;Database=RoomWithVueDB;Integrated Security=true;MultipleActiveResultSets=true"
+  }
+}
