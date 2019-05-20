@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Room>
+@section Scripts  {
+  @*<script src="~/node_modules/vue/dist/vue.js"></script>
+    <script src="~/js/app.js"></script>*@
+  <script src="~/client/app.js"></script>
+}
+<div class="row">
+
+  <div id="app"></div>
+
+  @*<div id="theApp">
+
+      <div :class="nameClass">
+        {{ name }}: {{ nameCount }}
+      </div>
+      <div>
+        {{ theDate | date }}
+      </div>
+
+      <div class="row">
+        <div class="col-md-4" v-for="r in rooms">
+          <div class="card">
+            <img class="card-img" :src="r.images[0].url" />
+            <div class="card-body">
+              <h4 class="card-title">{{ r.title }}</h4>
+              <p class="card-text">{{ r.description }}</p>
+              <ul class="list-unstyled">
+                <li><strong><i class="fas fa-male"></i> Max Guests:</strong> {{ r.maxGuests }}</li>
+                <li><strong><i class="fas fa-money-bill-alt"></i> Price:</strong> ${{ r.rate }}</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="float-right">
+                <button class="btn btn-sm btn-success" v-on:click="bookRoom(r)">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>*@
+</div>
