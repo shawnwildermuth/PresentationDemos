@@ -1,0 +1,6 @@
+/* Prevent collapse transition */
+.collapsing {
+  -webkit-transition: none;
+  transition: none;
+  display: none;
+}
