@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Room>
+@section Scripts {
+  @*<script src="/node_modules/vue/dist/vue.min.js"></script>
+    <script src="~/js/index.js"></script>*@
+  <script src="~/app/js/chunk-vendors.js"></script>
+  <script src="~/app/js/app.js"></script>
+}
+<div id="theApp">
+  @*{{ name }}
+    <div>
+      <button class="btn btn-success" v-on:click="addToName()">Click me</button>
+    </div>*@
+</div>
+@*<div class="row">
+    @foreach (var r in Model)
+    {
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img" src="@r.Images.First().Url" />
+          <div class="card-body">
+            <h4 class="card-title">@r.Title</h4>
+            <p class="card-text">@r.Description</p>
+            <ul class="list-unstyled">
+              <li><strong><i class="fas fa-male"></i> Max Guests:</strong> @r.MaxGuests</li>
+              <li><strong><i class="fas fa-money-bill-alt"></i> Price:</strong> $@r.Rate</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="float-right">
+              <button class="btn btn-sm btn-success">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>*@

@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "name": "mypackage",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.1.1",
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
+    "bootswatch": "~4.1.1",
+    "lodash": "4.17.5",
+    "vue": "^2.5.16",
+    "axios": "0.19.2"
+  }
+}
