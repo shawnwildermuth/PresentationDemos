@@ -3,7 +3,7 @@
   "name": "mypackage",
   "private": true,
   "dependencies": {
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "bootstrap": "^4.1.1",
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "bootswatch": "~4.1.1",
