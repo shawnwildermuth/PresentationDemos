@@ -1,0 +1,28 @@
+{
+  "name": "starting",
+  "version": "1.0.0",
+  "description": "Sample Tailwind",
+  "main": "index.js",
+  "scripts": {
+    "dev": "run-p dev:*",
+    "dev:js": "rollup --config -w",
+    "dev:css": "sass -w ./src/site.scss ./public/css/site.css",
+    "build": "run-p build:*",
+    "build:js": "rollup --config rollup.config.prod.js",
+    "build:css": "sass --style=compressed ./src/site.scss ./public/css/site.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "feather-icons": "^4.29.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.3",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-typescript": "^8.3.1",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.70.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}

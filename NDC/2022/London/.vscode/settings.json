@@ -1,0 +1,7 @@
+{
+  "liveServer.settings.CustomBrowser": "microsoft-edge",
+  "liveServer.settings.host": "localhost",
+  "liveServer.settings.root": "/public",
+  "liveServer.settings.port": 8082,
+  "liveServer.settings.donotShowInfoMsg": true
+}

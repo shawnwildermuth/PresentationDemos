@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .control-base {
+    @apply py-1 border border-yellow-500 bg-amber-600 rounded;
+  }
+
+  header .button {
+    @apply w-full;
+  }
+
+  .button {
+    @apply control-base hover:bg-amber-700 m-1 my-1
+   }
+  .button.selected {
+    @apply ring-2 ring-yellow-200;
+  }
+
+  h1 { @apply text-3xl;}
+}

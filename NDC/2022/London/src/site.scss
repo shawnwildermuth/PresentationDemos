@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+$backColor: #90adc6;
+$foreColor: #e9eaec;
+$accentColor: #fad02c;
+$baseColor: #333652;
+
+a {
+  color: $accentColor;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+header,
+footer {
+  background-color: darken($baseColor, 10%);
+  color: $foreColor;
+}
+
+footer {
+  background-color: darken($baseColor, 50%);
+  padding: 16px 8px;
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    min-height: 100vh;
+    a {
+      color: $accentColor;
+      text-decoration: none;
+      &:hover {
+        color: darken($accentColor, 20%);
+      }
+    }
+    #site-name {
+      font-size: 24px;
+      padding: 4px auto;
+      margin: 8px;
+      white-space: nowrap;
+    }
+    #menu {
+      div {
+        font-weight: bold;
+        margin: 0;
+        display: flex;
+        justify-items: baseline;
+        justify-content: end;
+        flex-direction: column;
+        list-style-type: none;
+        padding: 0;
+        margin-right: 8px;
+        height: 45px;
+        select {
+          margin: 16px 8px 8px;
+          padding: 8px;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        i {
+          color: invert($accentColor);
+        }
+      }
+    }
+  }
+}
+
+.button {
+  font-weight: bold;;
+  margin: 8px;
+  padding: 8px;
+  background: $accentColor;
+  color: invert($foreColor);
+  border-radius: 5px;
+  font-size: 18px;
+  &:hover {
+    background: darken($accentColor, 10%);
+  }
+  &.hide {
+    display: none;
+  }
+  &.selected {
+    background: darken($accentColor, 20%);
+  }
+}
+
+section#main {
+  background: #ccc;
+  padding: 8px;
+  #pager {
+    display: flex;
+    justify-content: end;
+    height: 55px;
+    #prev-page,
+    #next-page {
+      font-weight: bold;;
+      margin: 8px;
+      padding: 8px;
+      background: $accentColor;
+      color: invert($foreColor);
+      border-radius: 5px;
+      &:hover {
+        background: darken($accentColor, 10%);
+      }
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+}
+
+#results {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  justify-content: space-around;
+  .film {
+    border: 1px solid $baseColor;
+    border-radius: 8px;
+    background-color: $foreColor;
+    padding: 8px;
+    margin: 4px;
+    img {
+      width: 150px;
+      float: right;
+    }
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media only screen and (min-width: 989px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media only screen and (min-width: 1400px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
