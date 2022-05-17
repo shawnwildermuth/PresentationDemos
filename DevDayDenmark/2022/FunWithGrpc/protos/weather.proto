@@ -1,0 +1,23 @@
+﻿syntax = "proto3";
+
+package WeatherStations;
+
+service WeatherService {
+  rpc GetWeather(WeatherRequest) returns (WeatherResponse);
+  rpc GetWeathers(WeatherRequest) returns (WeatherResponses);
+}
+
+message WeatherResponses {
+  repeated WeatherResponse response = 1;
+}
+
+message WeatherRequest {
+  int32 stationId = 1;
+}
+
+message WeatherResponse {
+  float temperature = 1;
+  float windSpeed = 2;
+  float rainAmount = 3;
+  string status = 4;
+}
