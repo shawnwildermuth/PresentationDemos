@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+a {
+  color: #fad02c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+header,
+footer {
+  background-color: #1f2133;
+  color: #e9eaec;
+}
+
+footer {
+  background-color: black;
+  padding: 16px 8px;
+  text-align: center;
+}
+
+#container {
+  display: flex;
+}
+#container header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  min-height: 100vh;
+}
+#container header a {
+  color: #fad02c;
+  text-decoration: none;
+}
+#container header a:hover {
+  color: #bc9604;
+}
+#container header #site-name {
+  font-size: 24px;
+  padding: 4px auto;
+  margin: 8px;
+  white-space: nowrap;
+}
+#container header #menu div {
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  justify-items: baseline;
+  justify-content: end;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin-right: 8px;
+  height: 45px;
+}
+#container header #menu div select {
+  margin: 16px 8px 8px;
+  padding: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+#container header #menu div i {
+  color: #052fd3;
+}
+
+.button {
+  font-weight: bold;
+  margin: 8px;
+  padding: 8px;
+  background: #fad02c;
+  color: #161513;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.button:hover {
+  background: #edbe06;
+}
+.button.hide {
+  display: none;
+}
+.button.selected {
+  background: #bc9604;
+}
+
+section#main {
+  background: #ccc;
+  padding: 8px;
+}
+section#main #pager {
+  display: flex;
+  justify-content: end;
+  height: 55px;
+}
+section#main #pager #prev-page,
+section#main #pager #next-page {
+  font-weight: bold;
+  margin: 8px;
+  padding: 8px;
+  background: #fad02c;
+  color: #161513;
+  border-radius: 5px;
+}
+section#main #pager #prev-page:hover,
+section#main #pager #next-page:hover {
+  background: #edbe06;
+}
+section#main #pager #prev-page.hidden,
+section#main #pager #next-page.hidden {
+  display: none;
+}
+
+#results {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  justify-content: space-around;
+}
+#results .film {
+  border: 1px solid #333652;
+  border-radius: 8px;
+  background-color: #e9eaec;
+  padding: 8px;
+  margin: 4px;
+}
+#results .film img {
+  width: 150px;
+  float: right;
+}
+#results .film .title {
+  font-size: 18px;
+  font-weight: bold;
+}
+@media only screen and (min-width: 768px) {
+  #results {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 989px) {
+  #results {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #results {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/*# sourceMappingURL=site.css.map */

@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+  ],
+  "settings": {
+    "liveServer.settings.CustomBrowser": "microsoft-edge",
+    "liveServer.settings.host": "localhost",
+    "liveServer.settings.root": "/public",
+    "liveServer.settings.port": 8082,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.fontFamily": "Source Code Pro",
+    "editor.tabSize": 2,
+    "files.autoSave": "onFocusChange",
+    "workbench.colorTheme": "Visual Studio Light"
+  }
+}
