@@ -1,4 +1,3 @@
-```http
 @local=http://localhost:8888
 ###
 GET {{local}}/api/cars
