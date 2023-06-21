@@ -12,7 +12,6 @@
     },
     "https": {
       "commandName": "Project",
-      "launchBrowser": true,
       "launchUrl": "api/cars",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

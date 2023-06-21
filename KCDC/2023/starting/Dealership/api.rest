@@ -1,0 +1,56 @@
+```http
+@local=http://localhost:8888
+###
+GET {{local}}/api/cars
+###
+GET {{local}}/api/cars/1
+###
+GET {{local}}/api/cars/{vin}
+###
+POST {{local}}/api/cars
+Content-Type: application/json
+
+{
+  "make": "Subaru",
+  "model": "Crosstrek",
+  "year": 2021,
+  "new": false,
+  "vin": "12345678901234567",
+  "vehicleType": "SUV", 
+  "picture": "https://loremflickr.com/320/240/Car/any?lock=972157951"
+}
+###
+PUT {{local}}/api/cars/51
+Content-Type: application/json
+
+{
+  "id": 51,
+  "make": "Subaru",
+  "model": "Crosstrek",
+  "year": 2020,
+  "new": true,
+  "vin": "12345678901234567",
+  "vehicleType": "SUV", 
+  "picture": "https://loremflickr.com/320/240/Car/any?lock=972157951"
+}
+###
+DELETE {{local}}/api/cars/51
+###
+GET {{local}}/api/cars/1/salesperson
+###
+GET {{local}}/api/cars/1/lot
+###
+GET {{local}}/api/cars/{vin}/salesperson
+###
+GET {{local}}/api/cars/{vin}/lot
+###
+GET {{local}}/api/employees
+###
+GET {{local}}/api/employees/1
+###
+GET {{local}}/api/employees/1/cars
+###
+GET {{local}}/api/lots
+###
+GET {{local}}/api/lots/A
+###

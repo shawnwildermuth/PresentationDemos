@@ -2,7 +2,7 @@ using Dealership.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSingleton<Repo>());
+builder.Services.AddSingleton<Repo>();
 
 var app = builder.Build();
 
