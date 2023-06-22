@@ -1,0 +1,61 @@
+
+@local=http://localhost:8888
+###
+GET {{local}}/api/cars
+###
+GET {{local}}/api/cars/26
+###
+
+GET {{local}}/api/cars/IST5Q9I8D7A476675
+###
+GET http://localhost:5183/api/Cars/29
+###
+GET http://localhost:5183/api/Cars/29
+###
+POST {{local}}/api/cars
+Content-Type: application/json
+
+{
+  "make": "Subaru",
+  "model": "Crosstrek",
+  "year": 2021,
+  "new": false,
+  "vin": "12345678901234567",
+  "vehicleType": "SUV", 
+  "picture": "https://loremflickr.com/320/240/Car/any?lock=972157951"
+}
+###
+PUT {{local}}/api/cars/26
+Content-Type: application/json
+
+{
+  "make": "Ford",
+  "model": "Ranger",
+  "year": 1992,
+  "new": false,
+  "vin": "5551212",
+  "vehicleType": "Compact", 
+  "picture": "https://loremflickr.com/320/240/Car/any?lock=972157951"
+}
+###
+DELETE {{local}}/api/cars/26
+###
+GET {{local}}/api/cars/1/salesperson
+###
+GET {{local}}/api/cars/1/lot
+###
+GET {{local}}/api/cars/{vin}/salesperson
+###
+GET {{local}}/api/cars/{vin}/lot
+###
+GET {{local}}/api/employees
+Authorization: BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InNoYXduIiwic3ViIjoic2hhd24iLCJqdGkiOiJkZjNhOTRjZiIsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0OjYyNjEiLCJodHRwczovL2xvY2FsaG9zdDo0NDM0OSIsImh0dHA6Ly9sb2NhbGhvc3Q6NTE4MyIsImh0dHA6Ly9sb2NhbGhvc3Q6ODg4OCJdLCJuYmYiOjE2ODczODIzMTEsImV4cCI6MTY5NTMzMTExMSwiaWF0IjoxNjg3MzgyMzEyLCJpc3MiOiJkb3RuZXQtdXNlci1qd3RzIn0.Q0DgVbhjRm245d3-qmLaoAOiuB-0oCBWhvAHpIV1xN4
+###
+GET {{local}}/api/employees/1
+###
+GET {{local}}/api/employees/2/cars
+###
+GET {{local}}/api/lots
+###
+GET {{local}}/api/lots/A
+###
